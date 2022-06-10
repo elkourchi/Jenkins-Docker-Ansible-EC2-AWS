@@ -67,4 +67,13 @@
 
     sudo apt install ansible -y
 
+    - Adding "ansible-playbook file.yml" to Execute Shell 
+
+### Step 5 : Run Job
+
+    Run Job on Jenkins
+
+### Step 6 : Open the app
+
+    Go to your browser: PUBLIC_IPv4_ADDRESS:5000
     
