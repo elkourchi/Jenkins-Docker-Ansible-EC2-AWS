@@ -54,6 +54,17 @@
      Make sure the master branch name is the same as in the repository */main  or */master
 
      Add build setup then Execute Shell 
- 
-    docker build -t athelcall-img .
-docker run -d --name athelcall-cnt -p 5000:80 athelcall-img
+
+        docker build -t image-name .
+
+        docker run -d --name container-name -p 5000:80 image-name
+
+        (this step valid once, we can't reuse it . and by using ansible we make this job reusable )
+
+### Step 4 : Install Ansible
+
+    sudo apt update
+
+    sudo apt install ansible -y
+
+    
