@@ -1,6 +1,6 @@
 # Jenkins-Docker-Ansible-EC2-AWS
 
-## Step 1 : Create EC2 instence
+### Step 1 : Create EC2 instence
 
 - Security Groups Rules:
     - SSH
@@ -14,7 +14,7 @@
 - Connect to the created EC2 instence
     sudo ssh -i file.pem ubuntu@PUBLIC_IPv4_DNS_NAME
 
-## Step 2 : Install Jenkins
+### Step 2 : Install Jenkins
     sudo apt update -y
 
     sudo apt-get install openjdk-8-jdk -y 
@@ -39,3 +39,21 @@
     sudo apt update -y 
 
     sudo apt-get install jenkins -y
+  
+  - Access Jenkins through browser:
+
+        PUBLIC_IPv4_ADDRESS:8080
+
+        sudo cat <jenkins_default_password_path>
+
+        Fill in user details & Install suggested plugins
+
+### Step 3 : Create a job
+     Add Repository Link in Source Code Management
+
+     Make sure the master branch name is the same as in the repository */main  or */master
+
+     Add build setup then Execute Shell 
+ 
+    docker build -t athelcall-img .
+docker run -d --name athelcall-cnt -p 5000:80 athelcall-img
