@@ -1,0 +1,12 @@
+new times roman
++ logo
+les textes
+les images
++responssive
++effect
+englais
+php
+hebergement
+
+
+              

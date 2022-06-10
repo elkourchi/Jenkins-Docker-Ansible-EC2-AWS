@@ -1,0 +1,82 @@
+
+/* ?? ???? ?? ?????? ???? ???? ????? ???? ?????? ?? ?????? ?? ????? 
+?????? ????? ?? ????? ?? 
+  */
+
+/*
+
+<form name="sentMessage">
+    <label for="name">Name</label>
+    <input type="text" placeholder="Name">
+
+
+    <label for="email">Email Address</label>
+    <input type="email" placeholder="Email Address">
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" placeholder="Phone Number">
+
+    <label for="message">Message</label>
+    <textarea rows="5" placeholder="Message"></textarea>
+
+    <button type="submit">Send</button>
+</form>
+
+*/
+
+
+<!-- Delete All Before This Line -->
+
+
+<?php
+// Check for empty fields
+if(empty($_POST['name'])  		||
+   empty($_POST['email']) 		||
+   empty($_POST['phone']) 		||
+   empty($_POST['message'])	||
+   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+   {
+	echo "No arguments Provided!";
+	return false;
+   }
+	
+$name = strip_tags(htmlspecialchars($_POST['name']));
+$email_address = strip_tags(htmlspecialchars($_POST['email']));
+$phone = strip_tags(htmlspecialchars($_POST['phone']));
+$message = strip_tags(htmlspecialchars($_POST['message']));
+	
+
+/******************* Type Your Email Address Here *******************/
+
+$to = 'your email address @gmail.com Or yahoo';
+
+/******************* Type Your Email Address Here *******************/
+
+
+$email_subject = "Website Contact Form:  $name";
+
+$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
+
+/******************* Type Title Here *******************/
+$headers = "From: noreply@yourdomain.com\n"; 
+/******************* Type Title Here *******************/
+
+$headers .= "Reply-To: $email_address";	
+mail($to,$email_subject,$email_body,$headers);
+return true;			
+?>
+contact_me.php
+Affichage de contact_me.php
+
+
+
+
+
+
+
+
+
+
+
+
+#LoadModule ssl_module modules/mod_ssl.so

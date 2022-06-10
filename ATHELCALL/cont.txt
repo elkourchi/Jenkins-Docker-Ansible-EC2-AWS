@@ -1,0 +1,29 @@
+<section class="contact-us" id="contact">
+          <div class="container">
+              <div class="row text-center">
+                  <h2>Contactez-nous</h2>
+                  <p>Lorem ipsum dolor sit am et, consectetur adipisicing elit, sed do eiusmod</p>
+              </div>
+        </div>
+              <div class="row contact-form">
+                  <div class="col-lg-4">
+                      <h3>Visitez notre entreprise</h3>
+                      <div class="form">
+                          <h5><i class="ion-ios-location"></i>L'immeuble 1, lotissement Belair, champ de course - Fès - MAROC</h5><h5><i class="ion-ios-telephone"></i>0535652030</h5><h5><i class="ion-email"></i>direction.athelcall@gmail.com</h5>
+                      </div>
+                  </div>
+                   <form method="post" action="contact.php" >
+                  <div class="col-lg-4">
+                      <input type="text" name="name" placeholder="Name" required>
+                       <input type="email" name="email" placeholder="Email" required>
+                       <input type="text" name="subject" placeholder="Subject" required>
+                  </div>
+                  <div class="col-lg-4">
+                      <textarea type="message" name="message" placeholder="Message"></textarea>
+                  </div>
+                  <div class="col-lg-12 text-center bt">
+                      <input type="submit" class="btn btn-success" value="Envoyer">
+              </div>
+                  </form>
+              </div>
+      </section>
